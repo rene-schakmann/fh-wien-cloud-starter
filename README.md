@@ -25,6 +25,7 @@ You should create your infrastructure in this order:
 * Create Security Group
 * Create your ec2 instance (add the EC2 instance to the created security group, add it to the public subnet)
 * Add the following attribute to your EC2 Instance to automatically start your web server:  user_data = file("${path.module}/startup.sh")
+* Ensure that you are using an Amazon Linux AMI (https://aws.amazon.com/amazon-linux-2/?amazon-linux-whats-new.sort-by=item.additionalFields.postDateTime&amazon-linux-whats-new.sort-order=desc) e.g. ami-076309742d466ad69
 * Navigate to your AWS Console in your browser, locate your EC2 instance to get your public IP
 * Open http://your-public-ip to verify your web server is working
 

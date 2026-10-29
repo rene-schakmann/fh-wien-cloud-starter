@@ -2,16 +2,16 @@
 
 Starter project for the FH Wien cloud exercise: provision a small AWS environment (VPC, subnets, gateway, security group and a web server on EC2) with Terraform.
 
-> 📖 New to Terraform? Read the official introduction first: <https://www.terraform.io/intro>
+> 📖 New to Terraform? Read the official introduction first: <https://developer.hashicorp.com/terraform/intro>
 
 ## Before you start
 
 - **AWS CLI works** – it should still be set up from your previous exercise. Otherwise follow the [installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-- **Credentials are valid** – check that the access key and secret key in `~/.aws/credentials` are still valid. If not, [rotate your access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#rotating_access_keys_console).
+- **Credentials are valid** – check that the access key and secret key in `~/.aws/credentials` are still valid. If not, [rotate your access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id-credentials-access-keys-update.html).
 
 ## Set up Terraform
 
-1. Install Terraform for your operating system: [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+1. Install Terraform for your operating system: [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 2. Verify the installation (see *"Verify the installation"* in the guide above):
 
    ```sh

@@ -49,7 +49,18 @@ Create your infrastructure in this order:
      user_data = file("${path.module}/startup.sh")
      ```
 
-   - use an [Amazon Linux AMI](https://aws.amazon.com/amazon-linux-2/), e.g. `ami-076309742d466ad69`
+   - use an [Amazon Linux 2023 AMI](https://aws.amazon.com/linux/amazon-linux-2023/), e.g. `ami-01261a8585b05ad03` (x86_64, `eu-central-1`)
+
+     > 💡 AMI IDs change with every release. To always get the latest one, look it up instead of hard-coding it:
+     >
+     > ```hcl
+     > data "aws_ssm_parameter" "al2023" {
+     >   name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
+     > }
+     >
+     > # in your aws_instance:
+     > ami = data.aws_ssm_parameter.al2023.value
+     > ```
 
 ### Verify
 
